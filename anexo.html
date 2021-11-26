@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anexo</title>
 </head>
 <body>
-    <p>o Gustavo é bobão</p>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head >
+	<title>Cadastro</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="css/contraste.css">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src="js/jquery.js"></script>
+</head>
+<body>
+	<div id="acessibilidade">
+        <ul id="atalhos">
+            <li id="pgacess"><a href="acessibilidade.html" title="Ir para a página de Acessibilidade">ACESSIBILIDADE</a></li>
+			<li><a href="cadastro.html" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">
+				<span style="font-size: 16px; color: rgb(0, 0, 0);">
+					<i id="contraste" class="fas fa-adjust" onclick="trocar();"></i>
+				</span></a>
+			</li>
+                <li class="fonte"><a href="javascript:void(0);" onClick="fonte('a');" id="aumentar">A+</a></li>
+                <li class="fonte"><a href="javascript:void(0);" onClick="fonte('d');" id="diminuir">A-</a></li>
+        </ul>
+    </div>
+	<main id="conteudo">
+		<h1>CADASTRO</h1>
+       <section>
+           <div id="div_cad">
+                <form name="documento" id="documento" method="POST">
+                    <label for="rg" class="required rg">RG</label>
+                    
+                </form>
+              </div>        
+       </section>
+	
+	</main>
+	<footer id="rodape">
+		<img id="logopreto" src="img/Logo centro paula branco 1 (1).png">
+	</footer>
+    <script type="text/javascript" src="js/main.js"></script>
+	<script src="js/high-contrast.js"></script>
+	<script src="js/fonte.js"></script>
+</body>
+</html>
 </body>
 </html>
