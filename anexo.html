@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +9,13 @@
 <body>
     <!DOCTYPE html>
 <html lang="pt-br">
-<head >
+<head>
 	<title>Cadastro</title>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
-    <link rel="stylesheet" type="text/css" href="css/contraste.css">
+    <link rel="stylesheet" type="text/css" href="css/anexo.css">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<script src="js/jquery.js"></script>
 </head>
@@ -33,14 +33,41 @@
         </ul>
     </div>
 	<main id="conteudo">
-		<h1>CADASTRO</h1>
+		<h1>Cadastro</h1>
        <section>
-           <div id="div_cad">
-                <form name="documento" id="documento" method="POST">
-                    <label for="rg" class="required rg">RG</label>
-                    
-                </form>
-              </div>        
+            <div id="div_cad">
+                <table id="anexo" class="fonte">
+                    <tr>
+                        <td> <label for="rg" class="required rg">RG</label><br></td>  
+                        <td> <label for="certidao_nasc_casam" class="required certidao_nasc_casam">Certidão de nascimento ou casamento</label><br></td>
+                    </tr>
+                    <tr> 
+                        <td><label for="cpf" class="required cpf">CPF</label><br></td> 
+                        <td><label for="titulo_eleitor" class="required titulo_eleitor">Título de eleitor/comprovante de votação/<br>declaração de quitação eleitoral</label><br></tr>
+                    </tr>
+                    <tr>
+                        <td> <label for="com_res" class="required com_res">Comprovante de residência</label><br></td>
+                        <td> <label for="escola" class="required escola">Comprovante de escolaridade</label><br></td>
+                    </tr>
+                    <tr> 
+                        <td> <label for="reservista" class="reservista">Reservista</label><br></td>
+                        <td> <label for="nasc_filho" class="required nasc_filho">Certidão de nascimento do(s) filhos menores de 14 anos</label><br></td>
+                    </tr>
+                    <tr> 
+                        <td><label for="pis_pasep" class="required pis_pasep">PIS/PASEP</label><br></td>    
+                        <td><label for="cart_vac" class="required cart_vac">Carteirinha de vacinação do(s) filhos menores de 14 anos</label></td>
+                    </tr>
+                    <tr> 
+                        <td> <label for="curriculum" class="required curriculum">Curriculum atualizado</label><br></td>
+                        <td> <label for="comprovante_cc" class="required comprovante_cc">Comprovante de conta corrente Banco do Brasil</label><br></td>
+                    </tr>
+                    <tr> 
+                        <td> <label for="declaracao_inss" class="required declaracao_inss">Declaração mensal do INSS</label><br></td>
+                    </tr>    
+                    </table>
+                    <input type="submit" name="voltar" id="voltar" value="Voltar" class="botao"> <input type="submit" name="avancar" id="avancar" value="Avançar" class="botao">
+                </div>
+                
        </section>
 	
 	</main>
