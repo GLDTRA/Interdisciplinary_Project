@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Consulta</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/consulta.css">
+    <link rel="stylesheet" type="text/css" href="css/contraste.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <div id="acessibilidade">
+        <ul id="atalhos">
+            <li id="pgacess"><a href="acessibilidade.html" title="Ir para a página de Acessibilidade">ACESSIBILIDADE</a></li>
+			<li><a href="consulta.html" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">
+				<span style="font-size: 16px; color: rgb(0, 0, 0);">
+					<i id="contraste" class="fas fa-adjust" onclick="trocar();"></i>
+				</span></a>
+			</li>
+                <li class="fonte"><a href="javascript:void(0);" onClick="fonte('a');" id="aumentar">A+</a></li>
+                <li class="fonte"><a href="javascript:void(0);" onClick="fonte('d');" id="diminuir">A-</a></li>
+        </ul>
+    </div>
+    <main>
+        <h1>CONSULTA</h1>
+        <section>
+            <form name="pesquisa" id="pesquisa" method="POST">
+                <input type="text" name="procurar" id="procurar" required placeholder="Digite aqui o Nome Completo ou o Registro do Professor">
+            </form>
+            <img id="icone_pesquisa" src="./img/market-research 1.png" alt="Ícone de Pesquisa">
+            <table id="tabela_prof">
+                <colgroup>
+
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Registro Professor</th>
+                        <th>Nome Completo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>102030</td>
+                        <td>Maria Silva</td>
+                    </tr>
+                    <tr>
+                        <td>102031</td>
+                        <td>José Ferreira</td>
+                    </tr>
+                    <tr>
+                        <td>102032</td>
+                        <td>João Santos</td>
+                    </tr>
+                    <tr>
+                        <td>102033</td>
+                        <td>Francisco Gonzales</td>
+                    </tr>
+                    <tr>
+                        <td>102034</td>
+                        <td>Ariel Rocha</td>
+                    </tr>
+                    <tr>
+                        <td>102035</td>
+                        <td>Maria Silva</td>
+                    </tr>
+                    <tr>
+                        <td>102036</td>
+                        <td>Bruna Solange</td>
+                    </tr>
+                    <tr>
+                        <td>102037</td>
+                        <td>Gabriel Nogueira</td>
+                    </tr>
+                    <tr>
+                        <td>102038</td>
+                        <td>Karoline de Oliveira</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer id="rodape">
+		<img id="logopreto" src="img/Logo centro paula branco 1 (1).png">
+	</footer>
+    <script type="text/javascript" src="js/main.js"></script>
+	<script src="js/high-contrast.js"></script>
+	<script src="js/fonte.js"></script>
+</body>
+</html>
