@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head >
+	<title>Login</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/contraste.css">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src="js/jquery.js"></script>
+</head>
+<body>
+	<div id="acessibilidade">
+        <ul id="atalhos">
+            <li id="pgacess"><a href="acessibilidade.html" title="Ir para a página de Acessibilidade">ACESSIBILIDADE</a></li>
+			<li><a href="index.html" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">
+				<span style="font-size: 16px; color: rgb(255, 255, 255);">
+					<i id="contraste" class="fas fa-adjust" onclick="trocar();"></i>
+				</span></a>
+			</li>
+                <li class="fonte"><a href="javascript:void(0);" onClick="fonte('a');" id="aumentar">A+</a></li>
+                <li class="fonte"><a href="javascript:void(0);" onClick="fonte('d');" id="diminuir">A-</a></li>
+        </ul>
+    </div>
+	<main id="conteudo">
+		<div class="container">
+			<div class="img">
+				<img src="img/logo_fatec_branco 1 (1).png">
+			</div>
+			<div class="login-content">
+				<form action="index.html">
+					<h2 class="title zoom">LOGIN</h2>
+					<div class="input-div one">
+						<div class="i"></div>
+						<div class="div">
+								<h5 class="zoom">E-mail</h5>
+								<input type="text" class="input">
+						</div>
+					</div>
+					<div class="input-div pass">
+						<div class="i"></div>
+						<div class="div">
+								<h5 class="zoom">Senha</h5>
+								<input type="password" class="input" id="senha">
+								<span id="eye" style="color:rgb(255, 255, 255, 0.4);">
+									<i class="fas fa-eye" id="olho" onclick="toggle();"></i>
+								</span>
+						</div>
+					</div>
+					<a id="esqueceu" class="zoom" href="#">Esqueceu a senha?</a>
+					<input type="submit" class="btn" value="Entrar">
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer id="rodape">
+		<img id="logopreto" src="img/Logo centro paula branco 1 (1).png">
+	</footer>
+	<script>
+		var estado= false;
+		function toggle(){
+			if(estado){
+				document.getElementById("senha").setAttribute("type", "password");
+				document.getElementById("olho").style.color='rgb(255, 255, 255, 0.4)';
+				estado = false;
+			} else{
+				document.getElementById("senha").setAttribute("type", "text");
+				document.getElementById("olho").style.color='#fff';
+				estado = true;
+			}
+		}
+		function trocar(){
+			document.getElementById("logopreto").src="img/logobranco.png";
+		}
+	</script>
+    <script type="text/javascript" src="js/main.js"></script>
+	<script src="js/high-contrast.js"></script>
+	<script src="js/fonte.js"></script>
+</body>
+</html>
