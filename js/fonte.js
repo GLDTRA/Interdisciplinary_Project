@@ -1,5 +1,5 @@
 function fonte(e) {
-
+	
 	var elemento = $(".zoom");
 	var fonte = parseInt(elemento.css('font-size'));
 
@@ -15,7 +15,5 @@ function fonte(e) {
 	if (e == 'n'){
 		fonte = fonteNormal;
 	}
-
 	elemento.css("fontSize", fonte);
-	
 }
