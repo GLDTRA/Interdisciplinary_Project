@@ -10,6 +10,7 @@
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<script src="js/jquery.js"></script>
     <script src="js/validar.js"></script>
+    <script src="js/cep.js"></script>
     <div vw class="enabled">
           <div vw-access-button class="active"></div>
           <div vw-plugin-wrapper>
@@ -19,7 +20,7 @@
          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
          <script>
           new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
+         </script>
 </head>
 <body>
 	<div id="acessibilidade">
@@ -38,37 +39,35 @@
     <h1 id ="titulo" class="zoom">CADASTRO</h1>
     <img src="img/MicrosoftTeams-image3.png" id="tela_progresso" alt="Barra de Progresso mostrando em qual etapa está">
        <section> 
-           <div id="div_cad">
             <fieldset id="field">
-            <form name="contato" id="cadastro" method="POST" onsubmit="validar()">
+            <form name="cadastro" id="cadastro" method="POST" onsubmit="validar()">
                 <label for="nome" class="required nome zoom">Nome Completo</label>
                 <input type="text" name="nome" id="nome" required placeholder="Ex: Ana Maria Gonçalvez"><br><br>
-                <label for="sexo" class="required sexo zoom" id="sexo_font">Sexo</label>
+                <label for="sexo" class="required sexo zoom">Sexo</label>
                 <input type="text" name="sexo" id="sexo" required placeholder="Ex: Feminino">
-                <label for="data" class="required data zoom" id="data_font">Data de nascimento</label>
+                <label for="data" class="required data zoom">Data de nascimento</label>
                 <input type="date" name="data" id="data" class="num" required><br><br>
-                <label for="endereco" class="required endereco zoom" id="endereco_font">Endereço</label>
+                <label for="endereco" class="required endereco zoom">Endereço</label>
                 <input type="text" name="endereco" id="endereco" required placeholder="Ex: Rua José do Carmo">
                 <label for="numero" class="required numero zoom">Número</label>
                 <input type="number" name="numbero" id="numero" class="num" required><br><br>
-                <label for="complemento" class="complemento zoom" id="complemento_font">Complemento</label>
+                <label for="complemento" class="complemento zoom">Complemento</label>
                 <input type="text" name="complemento" id="complemento">
                 <label for="bairro" class="bairro zoom">Bairro</label>
                 <input type="text" name="bairro" id="bairro"><br><br>
-                <label for="cidade" class="required cidade zoom" id="cidade_font">Cidade</label>
+                <label for="cidade" class="required cidade zoom">Cidade</label>
                 <input type="text" name="cidade" id="cidade">
-                <label for="estado" class="required estado zoom" id="estado_font">Estado</label>
+                <label for="estado" class="required estado zoom">Estado</label>
                 <input type="text" name="estado" id="estado">
-                <label for="cep" class="required cep zoom" id="cep_font">CEP</label>
+                <label for="cep" class="required cep zoom">CEP</label>
                 <input type="text" name="cep" id="cep" required placeholder="Ex: 99999-999"><br><br>
-                <label for="telefone" class="telefone zoom" id="tel_font">Tel. Residencial</label>
+                <label for="telefone" class="telefone zoom">Tel. Residencial</label>
                 <input type="tel" name="telefone" id="telefone" placeholder="Ex: (99) 9999-9999" class="num">
-                <label for="tel" class="celular zoom" id="cel_font">Celular</label>
+                <label for="tel" class="celular zoom">Celular</label>
                 <input type="tel" name="celular" id="celular" placeholder="Ex: (99) 99999-9999" class="num"> <img src="img/MicrosoftTeams-image1.png" id="whatsapp_img" alt="Ícone do whatsapp"> <input type="checkbox" id="whatsapp" name="whatsapp">            
                 <input type="reset" name="cancelar" id="cancelar" value="Cancelar" class="botao"> <a href="anexo.html"><input name="avancar" id="avancar" value="Avançar" onclick=" return validar();"></a>
-                </form>
+            </form>
             </fieldset>
-            </div>
        </section>
 	
 	</main>
