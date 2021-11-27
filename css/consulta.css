@@ -93,18 +93,40 @@ h1{
     text-align: center;
     background-color: rgba(135, 207, 252, 0.3);
     border-collapse: collapse;
-    border-radius: 5%;
+    border-radius: 7%;
 }
 table td{
     border: 1px solid rgb(0, 0, 0);
     padding: 1%;
-}
-table tr:nth-child(7){
-    border-bottom: none;
 }
 table th{
     border: 1px solid black;
     padding: 1%;   
     font-style: italic;
 }
+table tr:first-child td {
+    border-top: 0;
+}
+table tr th:first-child {
+    border-top: 0;
+}
+table tr th:first-child {
+    border-left: 0;
+}
+table tr th:last-child {
+    border-top: 0;
+}
+table tr th:last-child {
+    border-right: 0;
+}
+table tr td:first-child {
+    border-left: 0;
+}
+table tr:last-child td {
+    border-bottom: 0;
+}
+table tr td:last-child {
+    border-right: 0;
+}
+
 
