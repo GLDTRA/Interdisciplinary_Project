@@ -59,7 +59,7 @@
 .contrast input[type=datetime-local],
 .contrast textarea,
 .contrast input[type=number] {
-    background: rgba(0, 0, 0, 0) !important;
+    background: rgba(255, 255, 255, 0) !important;
     border: 1px solid rgba(255, 255, 255, 0) !important;
     color: white !important;
 }
