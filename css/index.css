@@ -178,11 +178,12 @@ form{
 	font-size: 0.9rem;
 	transition: .3s;
 }
-
 #esqueceu:hover{
 	color: #fd8e8e;
 }
-
+#entrar1{
+	padding-left: 6%;
+}
 .btn{
 	display: block;
 	width:45%;
