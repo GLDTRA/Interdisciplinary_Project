@@ -17,6 +17,9 @@
 .contrast #email{
     border: none;
 }
+.contrast #senha{
+    border: none;
+}
 .contrast #icone_pesquisa{
     filter: grayscale(1);
 }
