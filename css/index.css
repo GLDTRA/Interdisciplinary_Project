@@ -178,11 +178,12 @@ form{
 	font-size: 0.9rem;
 	transition: .3s;
 }
-
 #esqueceu:hover{
 	color: #fd8e8e;
 }
-
+#entrar1{
+	text-decoration: none;
+}
 .btn{
 	display: block;
 	width:45%;
@@ -199,6 +200,7 @@ form{
 	cursor: pointer;
 	transition: .5s;
 	font-weight:bolder;
+	text-align: center;
 }
 .btn:hover{
 	background-position: right;
