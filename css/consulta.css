@@ -58,13 +58,16 @@ input, select{
     margin-left: 30%;
     text-align: center;
 }
-h1{
-    margin-top: 2%;
-    margin-bottom: 6%;
+#seta_titulo{
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+#consulta{
+    padding-left: 1%;
     color: #B20000;
     border-bottom: 6px solid #b200007a;
-    width: 40px;
-    margin-left: 5%;
+    font-size: 25pt;
+    font-weight: bold;
 }
 #botaoVoltar{
     width:20px;
