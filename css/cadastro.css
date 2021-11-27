@@ -224,3 +224,35 @@ h1{
     text-align: center;
     margin-top: 10%;
 }
+
+/*RESPONSIVIDADE*/
+@media screen and (max-width: 1000px){
+    img#logopreto{
+		width: 300px;
+	}  
+}
+
+@media screen and (max-width: 320px){
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 10px;
+    }
+	form{
+		width: 300px;
+        display: block;
+	}
+
+	.login-content h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.img img{
+		width: 400px;
+	}
+	img#logopreto{
+		width: 200px;
+	}
+}
