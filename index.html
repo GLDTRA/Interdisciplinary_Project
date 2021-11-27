@@ -10,6 +10,7 @@
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<script src="js/jquery.js"></script>
 	<script src="js/esqueceu_senha.js"></script>
+	<script src="js/login.js"></script>
 </head>
 <body>
 	<div id="acessibilidade">
@@ -30,28 +31,28 @@
 				<img src="img/logo_fatec_branco 1 (1).png" alt="Logo FATEC">
 			</div>
 			<div class="login-content">
-				<form action="index.html">
+				<form action="index.html" id="form_login" onsubmit="return login();">
 					<h2 class="title zoom">LOGIN</h2>
 					<div class="input-div one">
 						<div class="i"></div>
 						<div class="div">
 								<h5 class="zoom">E-mail</h5>
-								<input type="text" class="input" id="email">
+								<input type="text" class="input" id="login" value="">
 						</div>
 					</div>
 					<div class="input-div pass">
 						<div class="i"></div>
 						<div class="div">
 								<h5 class="zoom">Senha</h5>
-								<input type="password" class="input" id="senha">
+								<input type="password" class="input" id="senha" value="">
 								<span id="eye" style="color:rgb(255, 255, 255, 0.4);">
 									<i class="fas fa-eye" id="olho" onclick="toggle();"></i>
 								</span>
 						</div>
 					</div>
 					<a id="esqueceu" class="zoom" href="#" onclick = "return esqueceu_senha()">Esqueceu a senha?</a>
-					<a id="entrar1" href="cadastro.html">
-					<input class="btn" value="Entrar"></a>
+					<a href="cadastro.html" onclick="return login();">
+					<input id="entrar1"class="btn" value="Entrar"></a>
 				</form>
 			</div>
 		</div>
