@@ -1,93 +1,71 @@
-	/*CONTRASTE*/
-    .contrast .num{
-        background-color: rgba(255, 255, 255, 0);
-        border: 2px solid white;
-    }
-    .contrast #whatsapp_img{
-        opacity: 1;
-        filter:invert(100);
-    }
-    .contrast #logopreto{
-        opacity: 1;
-        filter:invert(100);
-    }
-    .contrast #tela_progresso{
-        opacity: 1;
-        filter:grayscale(2);
-    }
-    .contrast,
-    .contrast nav,
-    .contrast div,
-    .contrast li,
-    .contrast ol,
-    .contrast header,
-    .contrast footer,
-    .contrast section,
-    .contrast main,
-    .contrast aside,
-    .contrast article {
-        background: black !important;
-        color: white !important;
-    }
-    .contrast h1,
-    .contrast h2,
-    .contrast h3,
-    .contrast h4,
-    .contrast h5,
-    .contrast h6,
-    .contrast p,
-    .contrast label,
-    .contrast strong,
-    .contrast em,
-    .contrast cite,
-    .contrast q,
-    .contrast i,
-    .contrast b,
-    .contrast u,
-    .contrast span {
-        color: white !important;
-    }
-    .contrast a{
-        color: yellow !important;
-    }
-    .contrast button
-    {
-        background: rgb(255, 255, 255) !important;
-        color: rgb(0, 0, 0) !important;
-        border: none !important;
-    }
-    .contrast #avancar{
-        background: rgb(255, 255, 255) !important;
-        color: rgb(0, 0, 0) !important;
-        border: none !important;
-    }
-    .contrast input[type=button], 
-    .contrast input[type=reset], 
-    .contrast input[type=submit] {
-        background: rgb(255, 255, 255) !important;
-        color: rgb(0, 0, 0) !important;
-        border: none !important;
-    }
-    .contrast input[type=text]{
-        background-color: rgba(255, 255, 255, 0);
-        border: 2px solid white;
-    }
-    .contrast input[type=password],
-    .contrast input[type=url],
-    .contrast input[type=search],
-    .contrast input[type=email],
-    .contrast input[type=tel],
-    .contrast input[type=date],
-    .contrast input[type=month],
-    .contrast input[type=week],
-    .contrast input[type=datetime],
-    .contrast input[type=datetime-local],
-    .contrast textarea,
-    .contrast input[type=number]
-    .contrast img.on-contrast-force-gray {
-        filter: grayscale(100%) contrast(120%);
-    }
-    .contrast img.on-contrast-force-white {
-        filter: brightness(0) invert(1);
-    }
-    
+/*CONTRASTE*/
+.contrast #logopreto{
+	opacity: 1;
+	filter:invert(100);
+}
+.contrast,
+.contrast nav,
+.contrast div,
+.contrast li,
+.contrast ol,
+.contrast header,
+.contrast footer,
+.contrast section,
+.contrast main,
+.contrast aside,
+.contrast article {
+    background: black !important;
+    color: white !important;
+}
+.contrast h1,
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast h6,
+.contrast p,
+.contrast label,
+.contrast strong,
+.contrast em,
+.contrast cite,
+.contrast q,
+.contrast i,
+.contrast b,
+.contrast u,
+.contrast span {
+    color: white !important;
+}
+.contrast a{
+    color: yellow !important;
+}
+.contrast button,
+.contrast input[type=button],
+.contrast input[type=reset],
+.contrast input[type=submit] {
+    background: rgb(255, 255, 255) !important;
+    color: rgb(0, 0, 0) !important;
+    border: none !important;
+}
+.contrast input[type=text],
+.contrast input[type=password],
+.contrast input[type=url],
+.contrast input[type=search],
+.contrast input[type=email],
+.contrast input[type=tel],
+.contrast input[type=date],
+.contrast input[type=month],
+.contrast input[type=week],
+.contrast input[type=datetime],
+.contrast input[type=datetime-local],
+.contrast textarea,
+.contrast input[type=number] {
+    background: rgba(255, 255, 255, 0) !important;
+    border: 1px solid rgba(255, 255, 255, 0) !important;
+    color: white !important;
+}
+.contrast img.on-contrast-force-gray {
+    filter: grayscale(100%) contrast(120%);
+}
+.contrast img.on-contrast-force-white {
+    filter: brightness(0) invert(1);
+}

@@ -10,25 +10,14 @@
     <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	
-    <title>Cadastro</title>
+	<title>Cadastro</title>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" type="text/css" href="css/contraste.css">
     <link rel="stylesheet" type="text/css" href="css/anexo.css">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<script src="js/jquery.js"></script>
-    <div vw class="enabled">
-          <div vw-access-button class="active"></div>
-          <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-          </div>
-          </div>
-         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-         <script>
-          new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
 </head>
 <body>
 	<div id="acessibilidade">
@@ -45,42 +34,44 @@
     </div>
 	<main id="conteudo">
 		<h1>CADASTRO</h1>
-        <img src="img/MicrosoftTeams-image3.png" id="tela_progresso">
+        <img src="img/Progress Bar.png" id="tela_progresso">
        <section>
             <div id="div_cad">
-                <table id="anexo" class="fonte">
+                <table id="anexo">
                     <tr>
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="rg" class="required rg id">RG</label><br></td>  
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="certidao_nasc_casam" class="required certidao_nasc_casam id"> Certidão de nascimento ou casamento</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="rg" style="display:none;"/></span><label for="rg" class="required rg id zoom" >RG</label><br></td> 
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="certidao_nasc_casam" style="display:none;"/>
+                        </span><label for="certidao_nasc_casam" class="required certidao_nasc_casam id zoom"> Certidão de nascimento ou casamento</label><br></td>
                         <td><img id="usuario" src="img/Group 22.png"></td>
+                        <input type="file" name="rg" id="rg" style="display:none;"/>
                     </tr>
                     <tr> 
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="cpf" class="required cpf id">CPF</label><br></td> 
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="titulo_eleitor" class="required titulo_eleitor id">Título de eleitor/comprovante de votação/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;declaração de quitação eleitoral</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="cpf" style="display:none;"/></span><label for="cpf" class="required cpf id zoom">CPF</label><br></td> 
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="titulo_eleitor" style="display:none;"/></span><label for="titulo_eleitor" class="required titulo_eleitor id zoom">Título de eleitor/comprovante de votação/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;declaração de quitação eleitoral</label><br></td>
                     </tr>
                     <tr>
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="com_res" class="required com_res id">Comprovante de residência</label><br></td>
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="escola" class="required escola id">Comprovante de escolaridade</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="com_res" style="display:none;"/></span><label for="com_res" class="required com_res id zoom">Comprovante de residência</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="escola" style="display:none;"/></span><label for="escola" class="required escola id zoom">Comprovante de escolaridade</label><br></td>
                     </tr>
                     <tr> 
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="reservista" class="reservista id">Reservista</label><br></td>
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="nasc_filho" class="required nasc_filho id">Certidão de nascimento do(s) filhos menores de 14 anos</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="reservista" style="display:none;"/></span><label for="reservista" class="reservista id zoom">Reservista</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="nasc_filho" style="display:none;"/></span><label for="nasc_filho" class="required nasc_filho id zoom">Certidão de nascimento do(s) filhos menores de 14 anos</label><br></td>
                         <td class="foto id"><span style="font-size: 26px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="rg">&nbsp;&nbsp;&nbsp;Foto</label><br></td>  
                         <td>
                     </tr>
                     <tr> 
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="pis_pasep" class="required pis_pasep id">PIS/PASEP</label><br></td>    
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="cart_vac" class="required cart_vac id">Carteirinha de vacinação do(s) filhos menores de 14 anos</label></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="pis_pasep" style="display:none;"/></span><label for="pis_pasep" class="required pis_pasep id zoom">PIS/PASEP</label><br></td>    
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="cart_vac" style="display:none;"/></span><label for="cart_vac" class="required cart_vac id zoom">Carteirinha de vacinação do(s) filhos menores de 14 anos</label></td>
                     </tr>
                     <tr> 
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="curriculum" class="required curriculum id">Curriculum atualizado</label><br></td>
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="comprovante_cc" class="required comprovante_cc id">Comprovante de conta corrente Banco do Brasil</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="curriculum" style="display:none;"/></span><label for="curriculum" class="required curriculum id zoom">Curriculum atualizado</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="comprovante_cc" style="display:none;"/></span><label for="comprovante_cc" class="required comprovante_cc id zoom">Comprovante de conta corrente Banco do Brasil</label><br></td>
                     </tr>
                     <tr> 
-                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i></span><label for="declaracao_inss" class="required declaracao_inss id">Declaração mensal do INSS</label><br></td>
+                        <td><span style="font-size: 40px; color: #b2000080;"><i class="fas fa-upload"></i><input type="file" name="rg" id="declaracao_inss" style="display:none;"/></span><label for="declaracao_inss" class="required declaracao_inss id zoom">Declaração mensal do INSS</label><br></td>
                     </tr>    
                     </table>
-                    <input type="submit" name="voltar" id="voltar" value="Voltar" class="botao"> <input type="submit" name="avancar" id="avancar" value="Avançar" class="botao">
+                    <input type="reset" name="voltar" id="voltar" value="Voltar" class="botao"> <input type="submit" name="avancar" id="avancar" value="Avançar" class="botao">
                 </div>
        </section>
 	</main>
