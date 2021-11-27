@@ -182,7 +182,7 @@ form{
 	color: #fd8e8e;
 }
 #entrar1{
-	padding-left: 6%;
+	text-decoration: none;
 }
 .btn{
 	display: block;
@@ -200,6 +200,7 @@ form{
 	cursor: pointer;
 	transition: .5s;
 	font-weight:bolder;
+	text-align: center;
 }
 .btn:hover{
 	background-position: right;

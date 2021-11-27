@@ -10,6 +10,7 @@
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<script src="js/jquery.js"></script>
     <script src="js/validar.js"></script>
+    <script src="js/cep.js"></script>
     <div vw class="enabled">
           <div vw-access-button class="active"></div>
           <div vw-plugin-wrapper>
@@ -19,7 +20,7 @@
          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
          <script>
           new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
+         </script>
 </head>
 <body>
 	<div id="acessibilidade">
@@ -38,9 +39,8 @@
     <h1 id ="titulo" class="zoom">CADASTRO</h1>
     <img src="img/MicrosoftTeams-image3.png" id="tela_progresso" alt="Barra de Progresso mostrando em qual etapa está">
        <section> 
-           <div id="div_cad">
             <fieldset id="field">
-            <form name="contato" id="cadastro" method="POST" onsubmit="validar()">
+            <form name="cadastro" id="cadastro" method="POST" onsubmit="validar()">
                 <label for="nome" class="required nome zoom">Nome Completo</label>
                 <input type="text" name="nome" id="nome" required placeholder="Ex: Ana Maria Gonçalvez"><br><br>
                 <label for="sexo" class="required sexo zoom" id="sexo_font">Sexo</label>
@@ -50,7 +50,7 @@
                 <label for="endereco" class="required endereco zoom" id="endereco_font">Endereço</label>
                 <input type="text" name="endereco" id="endereco" required placeholder="Ex: Rua José do Carmo">
                 <label for="numero" class="required numero zoom">Número</label>
-                <input type="number" name="numbero" id="numero" class="num" required><br><br>
+                <input type="number" name="numero" id="numero" class="num" required><br><br>
                 <label for="complemento" class="complemento zoom" id="complemento_font">Complemento</label>
                 <input type="text" name="complemento" id="complemento">
                 <label for="bairro" class="bairro zoom">Bairro</label>
@@ -66,13 +66,13 @@
                 <label for="tel" class="celular zoom" id="cel_font">Celular</label>
                 <input type="tel" name="celular" id="celular" placeholder="Ex: (99) 99999-9999" class="num"> <img src="img/MicrosoftTeams-image1.png" id="whatsapp_img" alt="Ícone do whatsapp"> <input type="checkbox" id="whatsapp" name="whatsapp">            
                 <input type="reset" name="cancelar" id="cancelar" value="Cancelar" class="botao"> <a href="anexo.html"><input name="avancar" id="avancar" value="Avançar" onclick=" return validar();"></a>
-                </form>
+            </form>
             </fieldset>
-            </div>
        </section>
+	
 	</main>
 	<footer id="rodape">
-		<img id="logopreto" src="img/Logo centro paula branco 1 (1).png">
+		<img id="logopreto" src="img/Logo centro paula branco 1 (1).png" alt="Logo Centro Paula Souza preto">
 	</footer>
     <script type="text/javascript" src="js/main.js"></script>
 	<script src="js/high-contrast.js"></script>
