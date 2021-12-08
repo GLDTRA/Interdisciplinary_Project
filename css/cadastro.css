@@ -179,12 +179,12 @@ h1{
     border: none;
     transition: .5s;
 }
+
 #tela_login:hover{
     background-position: right;
 }
 #whatsapp{
     width: 10%;
-    
 }
 .required:after{
     content: " *";
