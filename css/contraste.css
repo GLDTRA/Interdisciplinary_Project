@@ -7,6 +7,7 @@
 .contrast h1{
     border-bottom: 6px solid #ffffff;
 }
+
 .contrast #consulta{
     border-bottom: 6px solid #ffffff;
 }
@@ -38,8 +39,9 @@
     border: none !important;
 }
 .contrast .num{
-    background-color: rgba(255, 255, 255, 0);
+    background-color: white;
     border: 2px solid white;
+    text-decoration-color: white;
     }
     .contrast #logopreto{
     opacity: 1;
@@ -94,9 +96,19 @@
     border: none !important;
     }
     .contrast input[type=text]{
-    background-color: rgba(255, 255, 255, 0);
-    border: 2px solid white;
+    background-color: white; 
     color: white;
+    }
+    .contrast #login{
+    background-color: rgba(255, 255, 255, 0) !important;  
+    color: white;
+    border-color: rgb(255, 255, 255);
+    }  
+    .contrast .required:after{
+        content: " *";
+        color: yellow;
+        font-weight:50;
+        font-size: 10pt;
     }
     .contrast input[type=password],
     .contrast input[type=url],
