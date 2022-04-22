@@ -133,3 +133,74 @@ table tr td:last-child {
     text-align: center;
     margin-top: 10%;
 }
+/*Responsividade*/
+
+@media screen and (max-width: 1050px){
+    #tabela_prof{
+        width: 750px; 
+    }
+}
+
+@media screen and (max-width: 1000px){
+	#tabela_prof{
+        width: 650px; 
+    }
+}
+
+@media screen and (max-width: 900px){
+	#tabela_prof{
+        width: 550px; 
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 820px) {
+    
+}
+@media screen and (max-width: 540px){
+	#tabela_prof{
+        width: 380px; 
+    }
+}
+
+
+@media screen and (max-width: 414px){
+    #tabela_prof{
+        width: 280px; 
+    }
+    #logopreto{
+         width: 290px; 
+    }
+    #icone_pesquisa{
+        margin-left: 250px;
+        margin-top: -40px;
+    
+    }
+    #procurar {
+        margin-left: 10%;
+        
+    }
+}
+@media screen and (max-width: 375px){
+    #tabela_prof{
+        width: 250px; 
+    }
+    #logopreto{
+        width: 270px;
+        margin-right: 10% ; 
+   }
+}
+@media screen and (max-width: 320px){
+    #tabela_prof{
+        width: 400px; 
+    }
+}
+@media screen and (max-width: 280px){
+	#tabela_prof{
+        width: 270px; 
+    }
+    #logopreto{
+        width: 270px;
+        margin-left: 15%; 
+   }
+}
+

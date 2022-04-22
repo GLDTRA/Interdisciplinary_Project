@@ -248,31 +248,245 @@ h1{
 /*RESPONSIVIDADE*/
 @media screen and (max-width: 1000px){
     img#logopreto{
-		width: 300px;
+		width: 250px;
 	}  
+    #rodape{
+        height: 250px;
+    }
 }
 
-@media screen and (max-width: 320px){
-    h1{
-        font-size: 20px;
+@media screen and (max-width: 800px){
+    form{
+        display: grid;
     }
-    p{
-        font-size: 10px;
+    #data_font {
+        padding-left: 0;
     }
-	form{
-		width: 300px;
-        display: block;
-	}
+    .bairro {
+        margin-left: 0;
+    }
+    #estado_font {
+        margin-left: 0;
+    }
+    #cep_font {
+        margin-left: 0;
+    }
+    #tel_font {
+        margin-right: 0;
+    }
+    #cel_font {
+        margin-left: 0;
+    }
+    #whatsapp_img {
+        margin-left: 0;
+    }   
+    #nome {
+        margin-bottom: -15px;
+        width: 80%;
+    }
+    #sexo {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    #data {
+        width: 40%;
+        margin-bottom: -15px;
+    }    
+    #endereco {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    #numero {
+        width: 25%;
+        margin-bottom: -15px;
+    }
+    #complemento {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    #bairro {
+        width: 60%;
+        margin-bottom: -15px;
+    }
+    #cidade {
+        width: 70%;
+        margin-bottom: 15px;
+    }
+    #estado {
+        width: 30%;
+        margin-bottom: 15px;
+    }
+    #cep {
+        width: 40%;
+        margin-bottom: -15px;
+    }
+    #telefone {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    #celular {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    #whatsapp_img {
+        margin-left: 0;
+        margin-bottom: -35px;
+    }
+    #whatsapp {
+        width: 10%;
+        margin-left: 45px;
+    }
+    #cancelar {
+        padding-left: 15px;
+        background-size: 200%;
+        margin-left: 50%;
+        margin-top: 30px;
+        background-image: linear-gradient(to right, #4A0202, #811717, #491515);
+        cursor: pointer;
+        width: 30%;
+        height: 40px;
+        background-color: #B20000;
+        color: white;
+        font-size: 18px;
+        border: none;
+        transition: .5s;
+        display: flex;
+    }
+    #avancar {
+        padding-left: 5%;
+        background-size: 200%;
+        margin-left: 10%;
+        margin-top: -39px;
+        background-image: linear-gradient(to right, #4A0202, #811717, #491515);
+        cursor: pointer;
+        width: 30%;
+        height: 40px;
+        background-color: #B20000;
+        color: white;
+        font-size: 18px;
+        border: none;
+        transition: .5s;
+        display: flex;
+    }
+    #rodape{
+        height: 250px;
+    }
+}
 
-	.login-content h2{
-        font-size: 2.4rem;
-        margin: 8px 0;
-	}
-
-	.img img{
-		width: 400px;
-	}
-	img#logopreto{
-		width: 200px;
-	}
+@media screen and (max-width: 375px){
+    form{
+        display: grid;
+    }
+    #data_font {
+        padding-left: 0;
+    }
+    .bairro {
+        margin-left: 0;
+    }
+    #estado_font {
+        margin-left: 0;
+    }
+    #cep_font {
+        margin-left: 0;
+    }
+    #tel_font {
+        margin-right: 0;
+    }
+    #cel_font {
+        margin-left: 0;
+    }
+    #whatsapp_img {
+        margin-left: 0;
+    }   
+    #nome {
+        margin-bottom: -15px;
+        width: 80%;
+    }
+    #sexo {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    #data {
+        width: 40%;
+        margin-bottom: -15px;
+    }    
+    #endereco {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    #numero {
+        width: 25%;
+        margin-bottom: -15px;
+    }
+    #complemento {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+    #bairro {
+        width: 60%;
+        margin-bottom: -15px;
+    }
+    #cidade {
+        width: 70%;
+        margin-bottom: 15px;
+    }
+    #estado {
+        width: 30%;
+        margin-bottom: 15px;
+    }
+    #cep {
+        width: 40%;
+        margin-bottom: -15px;
+    }
+    #telefone {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    #celular {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+    #whatsapp_img {
+        margin-left: 0;
+        margin-bottom: -35px;
+    }
+    #whatsapp {
+        width: 10%;
+        margin-left: 45px;
+    }
+    #cancelar {
+        padding-left: 5%;
+        background-size: 200%;
+        margin-left: 50%;
+        margin-top: 30px;
+        background-image: linear-gradient(to right, #4A0202, #811717, #491515);
+        cursor: pointer;
+        width: 30%;
+        height: 40px;
+        background-color: #B20000;
+        color: white;
+        font-size: 18px;
+        border: none;
+        transition: .5s;
+        display: flex;
+    }
+    #avancar {
+        padding-left: 5%;
+        background-size: 200%;
+        margin-left: 10%;
+        margin-top: -39px;
+        background-image: linear-gradient(to right, #4A0202, #811717, #491515);
+        cursor: pointer;
+        width: 30%;
+        height: 40px;
+        background-color: #B20000;
+        color: white;
+        font-size: 18px;
+        border: none;
+        transition: .5s;
+        display: flex;
+    }
+    #rodape{
+        height: auto;
+    }
 }
