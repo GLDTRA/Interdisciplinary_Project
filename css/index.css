@@ -6,6 +6,7 @@
 
 body{
 	background-image: url("../img/fundo2.png");
+	background-size: cover;
 	background-repeat: no-repeat;
     background-size: 1950px 1410px;
 	background-color: rgb(255, 104, 104);
