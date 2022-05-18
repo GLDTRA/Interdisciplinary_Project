@@ -1,0 +1,28 @@
+{
+  "name": "interdisciplinary_project",
+  "version": "1.0.0",
+  "description": "<h1 align=center>🏃🔥 Projeto Interdisciplinar - FATEC<a name=\"introduction\"></a></h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GLDTRA/Interdisciplinary_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GLDTRA/Interdisciplinary_Project/issues"
+  },
+  "homepage": "https://github.com/GLDTRA/Interdisciplinary_Project#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "passport": "^0.5.3",
+    "sequelize": "^6.19.2",
+    "sha1": "^1.1.1"
+  }
+}
