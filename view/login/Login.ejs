@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head >
+	<title>Login</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../_public/css/index.css">
+	<link rel="stylesheet" type="text/css" href="../_public/css/contraste.css">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src="../_public/js/jquery.js"></script>
+	<script src="../_public/js/esqueceu_senha.js"></script>
+	<script src="../_public/js/login.js"></script>
+</head>
+<body>
+	<div id="acessibilidade">
+        <ul id="atalhos">
+            <li id="pgacess"><a href="acessibilidade.html" title="Ir para a página de Acessibilidade">ACESSIBILIDADE</a></li>
+			<li><a href="index.html" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">
+				<span style="font-size: 16px; color: rgb(255, 255, 255);">
+					<i id="contraste" class="fas fa-adjust" onclick="trocar();"></i>
+				</span></a>
+			</li>
+                <li class="fonte"><a href="javascript:void(0);" onClick="fonte('a');" id="aumentar">A+</a></li>
+                <li class="fonte"><a href="javascript:void(0);" onClick="fonte('d');" id="diminuir">A-</a></li>
+        </ul>
+    </div>
+	<main id="conteudo">
+		<div class="container">
+			<div class="img">
+				<img src="../_public/img/logo_fatec_branco 1 (1).png" alt="Logo FATEC">
+			</div>
+			<div class="login-content">
+				<form action="/login/executar" id="form_login" onsubmit="login();" method="POST">
+					<h2 class="title zoom">LOGIN</h2>
+					<div class="input-div one">
+						<div class="i"></div>
+						<div class="div">
+								<h5 class="zoom">E-mail</h5>
+								<input type="text" name = "email" class="input" id="login" value="">
+						</div>
+					</div>
+					<div class="input-div pass">
+						<div class="i"></div>
+						<div class="div">
+								<h5 class="zoom">Senha</h5>
+								<input type="password" name = "senha" class="input" id="senha" value="">
+								<span id="eye" style="color:rgb(255, 255, 255, 0.4);">
+									<i class="fas fa-eye" id="olho" onclick="toggle();"></i>
+								</span>
+						</div>
+					</div>
+					<a id="esqueceu" class="zoom" href="#" onclick = "esqueceu_senha()">Esqueceu a senha?</a>
+					
+					<input id="entrar1" type="submit" class="btn" value="Entrar">
+					<% if(mensagemLogin) { %>
+						<br><p>
+							<label style="color: rgb(87, 2, 2)"><%= mensagemLogin %></label>
+						</p>
+					<%}%>
+				</form>
+				
+			</div>
+			
+		</div>
+		
+	</main>
+	<footer id="rodape">
+        <img id="logopreto" src="../_public/img/Logo centro paula branco 1 (1).png" alt="Logo Centro Paula Souza preto">
+        <p id="copy">Desenvolvido por Grupo 3 &copy; 2021.</p>
+    </footer>
+	<script>
+		var estado= false;
+		function toggle(){
+			if(estado){
+				document.getElementById("senha").setAttribute("type", "password");
+				document.getElementById("olho").style.color='rgb(255, 255, 255, 0.4)';
+				estado = false;
+			} else{
+				document.getElementById("senha").setAttribute("type", "text");
+				document.getElementById("olho").style.color='#fff';
+				estado = true;
+			}
+		}
+		function trocar(){
+			document.getElementById("logopreto").src="../_public/img/logobranco.png";
+		}
+	</script>
+    <script type="text/javascript" src="../_public/js/main.js"></script>
+	<script src="../_public/js/high-contrast.js"></script>
+	<script src="../_public/js/fonte.js"></script>
+</body>
+</html>
