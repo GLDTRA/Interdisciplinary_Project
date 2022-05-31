@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de usuário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../_public/css/homeUsuario.css">
+
+</head>
+<body>
+
+<div id="menu-bars" class="fas fa-bars"></div>
+    
+<!-- header section começo  -->
+<header>
+  
+    <a href="#" class="logo"> <span>s</span>ap</a>
+    <h3 id="bem_vindo"> Perfil: <span><%= usuario.nome %></span> </h3>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#usuarios">Usuários</a>
+        <a href="#professores">Professores</a>
+        <a href="#edital">Concursos</a>
+        <a href="#perfil">Meu perfil</a>
+    </nav>
+
+    <form action="/logout?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Log Out</button>
+    </form>
+</header>
+<!-- header section fim -->
+
+<!-- home section começo  -->
+<section class="home" id="home">
+    <div class="content">
+        <h3> bem-vindo, <span><%= usuario.nome %></span> </h3>
+        <p class="info"> Perfil: <%= usuario.perfil%>  </p>
+        <p class="text"> Você possui permissão para cadastro, alteração e deleção(usuários e professores). </p>
+        <a href="#perfil" class="btn">Meu Perfil</a><br>
+        <a href="http://localhost:8081/cadastro/usuario" class="btn">Cadastrar informações</a><br>
+    </div>
+
+    <div class="image">
+        <img src="../_public/img/logopretofateczl20anos.png" alt="">
+    </div>
+</section>
+<!-- home section fim -->
+
+<!-- lista usuarios section inicio  -->
+<section class="usuarios" id="usuarios">
+
+<h1 class="heading"> lista <span> usuários </span> </h1>
+    <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>cpf</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Setor</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% docs.forEach(function(usuario){ %>
+            <div class="prof-list" id="prof-list">
+                <tr class="prof">
+                    <td data-label="id"><%= usuario.id %></td>
+                    <td data-label="cpf"><%= usuario.cpf %></td>  
+                    <td data-label="nome"><%= usuario.nome %></td>
+                    <td data-label="email"><%= usuario.email %></td>
+                    <td data-label="setor"><%= usuario.setor %></td>
+                    <td>
+                      <input type="button" class="btn" 
+                      value="ver" onclick="location.href='/edit/usuario<%= usuario.id %>'"/>
+                      
+                    </td>
+                </tr>
+            </div>
+          <% }) %>
+        </tbody>
+      </table>
+</section>
+<!-- lista usuarios section fim  -->
+
+<!-- lista professores section inicio  -->
+<section class="professores" id="professores">
+
+<h1 class="heading"> lista <span> professores </span></h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% professor.forEach(function(professor){ %>
+          <div class="prof-list" id="prof-list">
+              <tr class="prof">
+                  <td data-label="id"><%= professor.registro %></td> 
+                  <td data-label="nome"><%= professor.nome %></td>
+                  <td data-label="email"><%= professor.email %></td>
+                  <td>
+                    <input type="button" class="btn"
+                    value="ver" onclick="location.href='/consulta/professor<%= professor.registro %>'" />
+                  </td>
+              </tr>
+          </div>
+        <% }) %>
+      </tbody>
+    </table>
+</section>
+<!-- lista professores section fim  -->
+
+<!-- lista editais section inicio  -->
+<section class="usuarios" id="edital">
+  <h1 class="heading"> lista <span> editais </span> </h1>
+      <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Numero</th>
+              <th>Descrição</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% edital.forEach(function(edital){ %>
+              <div class="prof-list" id="prof-list">
+                  <tr class="prof">
+                      <td data-label="id"><%= edital.id %></td>
+                      <td data-label="numero"><%= edital.numero %></td>
+                      <td data-label="descricao"><%= edital.descricao %></td>   
+                      <td>
+                        <input type="button" class="btn" 
+                      value="ver" onclick="location.href='/edit/edital<%= edital.id %>'"/>
+                      </td>
+                  </tr>
+              </div>
+            <% }) %>
+          </tbody>
+        </table>
+  </section>
+  <!-- lista editais section fim  -->
+
+<!-- lista prof coordenadores section inicio  -->
+<section class="usuarios" id="coord">
+  <h1 class="heading"> lista <span> prof. coordenadores </span> </h1>
+      <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>cpf</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% coord.forEach(function(coord){ %>
+              <div class="prof-list" id="prof-list">
+                  <tr class="prof">
+                      <td data-label="id"><%= coord.id %></td>
+                      <td data-label="nome"><%= coord.nome %></td>
+                      <td data-label="cpf"><%= coord.cpf %></td>  
+                      <td>
+                        <input type="button" class="btn" 
+                        value="ver" onclick="location.href='/edit/coord<%= coord.id %>'"/>
+                        
+                      </td>
+                  </tr>
+              </div>
+            <% }) %>
+          </tbody>
+        </table>
+  </section>
+  <!-- lista prof coordenadores section fim  -->
+
+<!-- lista disciplinas section inicio  -->
+<section class="usuarios" id="disciplina">
+  <h1 class="heading"> lista <span> disciplinas</span> </h1>
+      <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% disc.forEach(function(disc){ %>
+              <div class="prof-list" id="prof-list">
+                  <tr class="prof">
+                      <td data-label="id"><%= disc.id %></td>
+                      <td data-label="nome"><%= disc.nome %></td>
+                      <td data-label="descricao"><%= disc.descricao %></td>  
+                      <td>
+                        <input type="button" class="btn" 
+                        value="ver" onclick="location.href='/edit/disciplina<%= disc.id %>'"/>
+                      </td>
+                  </tr>
+              </div>
+            <% }) %>
+          </tbody>
+        </table>
+  </section>
+  <!-- lista disciplinas section fim  -->
+
+  <!-- lista concursos section inicio  -->
+<section class="usuarios" id="concurso">
+  <h1 class="heading"> lista <span> concursos</span> </h1>
+      <table>
+          <thead>
+            <tr>
+              <th>Cod</th>
+              <th>Unidade</th>
+              <th>Cidade</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% concurso.forEach(function(concurso){ %>
+              <div class="prof-list" id="prof-list">
+                  <tr class="prof">
+                      <td data-label="cod"><%= concurso.cod %></td>
+                      <td data-label="unidade"><%= concurso.unidade%></td>
+                      <td data-label="cidade"><%= concurso.cidade%></td>   
+                      <td>
+                        <input type="button" class="btn" 
+                        value="ver" onclick="location.href='/edit/concurso<%= concurso.cod %>'"/>
+                      </td>
+                  </tr>
+              </div>
+            <% }) %>
+          </tbody>
+        </table>
+  </section>
+  <!-- lista disciplinas section fim  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- perfil usuario section inicio  -->
+<section class="form" id="perfil">
+
+  <h1 class="heading"> meu <span> perfil </span> </h1>
+  
+  <div class="row">
+      <form action="/usuario/edit/perfil/salvar" method="post">
+          <input type="hidden" name="id" placeholder="id" class="box" value= <%=usuario.id %>>
+          <input type="text" name="nome" placeholder="nome" class="box" value= <%=usuario.nome %>>
+          <input type="text" name="setor" placeholder="setor" class="box" value= <%=usuario.setor %>>
+          <input type="email" name="email" placeholder="email" class="box" value= <%=usuario.email %>>
+          <input type="text" name="senha" placeholder="senha" class="box">
+          <input type="submit" class="btn" value="alterar">
+      </form>
+  </div>
+
+</section>
+<!-- perfil usuario section fim -->
+
+<!-- footer section  -->
+<footer class="footer"> created by <span> grupo 3</span> | all rights reserved! </footer>
+
+
+
+<!-- custom js file link  -->
+<script src="../_public/js/perfilUsuario.js"></script>
+</body>
+</html>

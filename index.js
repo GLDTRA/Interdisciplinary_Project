@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-
+const seguranca = require('./model/components/seguranca');
+const methodOverride = require('method-override')
 //npm install ejs
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs')
@@ -28,15 +29,21 @@ app.use(session({
 
     app.use(passport.initialize());
     app.use(passport.session());
-
+    app.use(methodOverride('_method'));
+    
 //Rota de validação de Login do usuário
-app.post('/login/executar', passport.authenticate('local', {
-    successRedirect: '/lista/usuario',
-    failureRedirect: '/login/?fail=true'
-}));
+app.post('/login/executar', seguranca.checkNotAuthenticated,
+    passport.authenticate('local', {successRedirect: '/home/usuario', failureRedirect: '/?fail=true'})
+);
+
+app.delete('/logout', (req, res) => {
+    req.logOut()
+    res.redirect('/')
+})
 
 // npm install consign
 var consign = require('consign');
+const req = require("express/lib/request");
 consign().include('controller/routes', ).into(app);
 
 app.use(express.static('view'));

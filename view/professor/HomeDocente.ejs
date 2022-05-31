@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do professor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../_public/css/homeUsuario.css">
+
+</head>
+<body>
+
+<div id="menu-bars" class="fas fa-bars"></div>
+    
+<!-- header section começo  -->
+<header>
+
+    <a href="#" class="logo"> <span>s</span>ap</a>
+        <h3 id="bem_vindo"> bem-vindo, <span id="perfil"><br><%= professor.nome %></span> </h3>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#alterar">Alterar</a>
+    </nav>
+
+    <form action="/logout?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Log Out</button>
+    </form>
+</header>
+<!-- header section fim -->
+
+<!-- home section começo  -->
+<section class="home" id="home">
+    <div class="content">
+        <p class="info">  </p><br>
+        <div class="form" id="perfil"> 
+            <div class="row">
+                <form>
+                    <input type="text" name="nome" placeholder="nome" class="box" disabled="" value= <%=professor.nome %>>
+                    <input type="text" name="cpf" placeholder="cpf" class="box" disabled="" value= <%=professor.cpf %>>
+                    <input type="text" name="sexo" placeholder="sexo" class="box" disabled="" value= <%=professor.sexo %>>
+                    <input type="date" name="cpf" placeholder="data" class="box" disabled="" value= <%=professor.data_nascimento %>>
+                    <input type="text" name="endereco" placeholder="endereço" class="box" disabled="" value= <%=professor.endereco %>>
+                    <input type="number" name="numero" placeholder="número" class="box" disabled="" value= <%=professor.numero %>>
+                    <input type="text" name="complemento" placeholder="complemento" class="box" disabled="" value= <%=professor.complemento %>>
+                    <input type="text" name="bairro" placeholder="bairro" class="box" disabled="" value= <%=professor.bairro %>>
+                    <input type="text" name="cidade" placeholder="cidade" class="box" disabled="" value= <%=professor.cidade %>>
+                    <input type="text" name="estado" placeholder="estado" class="box" disabled="" value= <%=professor.estado %>>
+                    <input type="text" name="cep" placeholder="cep" class="box" disabled="" value= <%=professor.cep %>>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="image">
+        <img src="../_public/img/logopretofateczl20anos.png" alt="">
+    </div>
+    
+    
+</section>
+<!-- home section fim -->
+    <!-- perfil usuario section inicio  -->
+<section class="form" id="alterar">
+
+    <h1 class="heading">Alterar<span> contato </span> </h1>
+    
+    <div class="row">
+        <form action="/cadastro/professor/edit/salvar" method="post">
+            <input type="text" name="tel_residencial" placeholder="telefone residencial" class="box" value= <%=professor.tel_residencial %>>
+
+            <input type="text" name="celular" placeholder="celular" class="box" value= <%=professor.celular %>>
+
+            <input type="text" name="whats" placeholder="WhatsApp ('sim')('nao')" class="box" value="WhasApp <%= whatsapp %>"><br>
+
+            <input type="submit" class="btn" value="alterar">
+        </form>
+    </div>
+  
+  </section>
+  <!-- perfil usuario section fim -->
+
+
+<!-- footer section  -->
+<footer class="footer"> created by <span> grupo 3</span> | all rights reserved! </footer>
+
+
+
+<!-- custom js file link  -->
+<script src="../_public/js/perfilUsuario.js"></script>
+</body>
+</html>

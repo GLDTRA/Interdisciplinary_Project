@@ -1,6 +1,6 @@
 const LocalStrategy = require('passport-local').Strategy;
-const seguranca = require("./seguranca");
 const usuarioBanco = require("../repositories/sql_objects/usuarioDB");
+
 
 module.exports = function(passport){
     passport.serializeUser((user, done) => {
@@ -35,3 +35,7 @@ module.exports = function(passport){
         }
     ));
 };
+
+
+
+

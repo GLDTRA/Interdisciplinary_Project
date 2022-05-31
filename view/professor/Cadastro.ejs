@@ -5,12 +5,12 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
-    <link rel="stylesheet" type="text/css" href="css/contraste.css">
+    <link rel="stylesheet" type="text/css" href="../_public/css/cadastro.css">
+    <link rel="stylesheet" type="text/css" href="../_public/css/contraste.css">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-	<script src="js/jquery.js"></script>
-    <script src="js/validar.js"></script>
-    <script src="js/cep.js"></script>
+	<script src="../_public/js/jquery.js"></script>
+    <script src="../_public/js/validar.js"></script>
+    <script src="../_public/js/cep.js"></script>
     <div vw class="enabled">
           <div vw-access-button class="active"></div>
           <div vw-plugin-wrapper>
@@ -37,12 +37,14 @@
     </div>
     <main id="conteudo"></main>
     <h1 id ="titulo" class="zoom">CADASTRO</h1>
-    <img src="img/MicrosoftTeams-image3.png" id="tela_progresso" alt="Barra de Progresso mostrando em qual etapa está">
+    <img src="../_public/img/MicrosoftTeams-image3.png" id="tela_progresso" alt="Barra de Progresso mostrando em qual etapa está">
        <section> 
             <fieldset id="field">
-            <form name="cadastro" id="cadastro" method="POST" onsubmit="validar()">
+            <form name="cadastro" action="/cadastro/professor/salvar" id="cadastro" method="POST" onsubmit="validar()">
                 <label for="nome" class="required nome zoom">Nome Completo</label>
-                <input type="text" name="nome" id="nome" required placeholder="Ex: Ana Maria Gonçalvez"><br><br>
+                <input type="text" name="nome" id="nome" required placeholder="Ex: Ana Maria Gonçalvez">
+                <label for="cpf" class="required cpf zoom">cpf</label>
+                <input type="text" name="cpf" id="cpf" required placeholder="Ex: 999-730-858."><br><br>
                 <label for="sexo" class="required sexo zoom" id="sexo_font">Sexo</label>
                 <input type="text" name="sexo" id="sexo" required placeholder="Ex: Feminino">
                 <label for="data" class="required data zoom" id="data_font">Data de nascimento</label>
@@ -64,19 +66,19 @@
                 <label for="telefone" class="telefone zoom" id="tel_font">Tel. Residencial</label>
                 <input type="tel" name="telefone" id="telefone" placeholder="Ex: (99) 9999-9999" class="num">
                 <label for="tel" class="celular zoom" id="cel_font">Celular</label>
-                <input type="tel" name="celular" id="celular" placeholder="Ex: (99) 99999-9999" class="num"> <img src="img/MicrosoftTeams-image1.png" id="whatsapp_img" alt="Ícone do whatsapp"> <input type="checkbox" id="whatsapp" name="whatsapp">            
-                <input type="reset" name="cancelar" id="cancelar" value="Cancelar" class="botao"> <a href="anexo.html"><input name="avancar" id="avancar" value="Avançar" onclick="validar()"></a>
+                <input type="tel" name="celular" id="celular" placeholder="Ex: (99) 99999-9999" class="num"> <img src="../_public/img/MicrosoftTeams-image1.png" id="whatsapp_img" alt="Ícone do whatsapp"> <input type="checkbox" id="whatsapp" name="whatsapp">            
+                <input type="reset" name="cancelar" id="cancelar" value="Cancelar" class="botao"><input name="avancar" id="avancar" type="submit" value="Avançar" onclick="validar()">
             </form>
             </fieldset>
        </section>
 	
 	</main>
 	<footer id="rodape">
-		<img id="logopreto" src="img/Logo centro paula branco 1 (1).png" alt="Logo Centro Paula Souza preto">
+		<img id="logopreto" src="../_public/img/Logo centro paula branco 1 (1).png" alt="Logo Centro Paula Souza preto">
 	</footer>
-    <script type="text/javascript" src="js/main.js"></script>
-	<script src="js/high-contrast.js"></script>
-	<script src="js/fonte.js"></script>
+    <script type="text/javascript" src="../_public/js/main.js"></script>
+	<script src="../_public/js/high-contrast.js"></script>
+	<script src="../_public/js/fonte.js"></script>
     
 </body>
 </html>
