@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de alteração</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../_public/css/homeUsuario.css">
+
+</head>
+<body>
+
+<div id="menu-bars" class="fas fa-bars"></div>
+    
+<!-- header section começo  -->
+<header>
+
+    <a href="#" class="cad"><span>área</span><br> alteração</a>
+    <h3 id="bem_vindo"> Perfil: <span id="perfil"><br><%= usuario.nome %></span> </h3>
+    <nav class="navbar">
+        <a href="http://localhost:8081/home/usuario">Home</a>
+    </nav>
+    
+    <form action="/logout?_method=DELETE" method="POST">
+        <button class="btn" type="submit">Log Out</button>
+      </form>
+</header>
+<!-- header section fim -->
+
+<!-- cadastro usuario section inicio  -->
+<section class="form" id="usuario">
+
+    <h1 class="heading"> alterar <span> disciplina </span> </h1>
+    
+    <div class="row">
+        <form action="/cadastro/disc/edit/salvar" method="post">
+            <input type="hidden" name="id_disc" placeholder="nome" class="box" value= <%=disc.id %>>
+            <input type="text" name="nome_disc" placeholder="nome" class="box" value= <%= disc.nome %>>
+            <input type="number" name="id_coord_disc" placeholder="id coordenador" class="box" value= <%= disc.id_coordenador %>>
+            <textarea name="descricao_disc" placeholder="descricao" cols="30" rows="10"><%= disc.descricao %></textarea>
+            <input type="submit" class="btn" value="alterar">
+            <input type="button" class="btn" value="delete" onclick="location.href='/delete/disc<%= disc.id %>'"/>
+        </form>
+    </div>
+
+</section>
+<!-- cadastro usuario section fim -->
+
+
+
+<!-- footer section  -->
+<footer class="footer"> created by <span> grupo 3 </span> | all rights reserved! </footer>
+
+
+
+<!-- custom js file link  -->
+<script src="../_public/js/perfilUsuario.js"></script>
+</body>
+</html>

@@ -9,8 +9,8 @@ async function selectUsuario(){
 
 async function insertUsuario(usuario){
     const conn = await usuarioBD.connect();
-    const sql = 'INSERT INTO usuario(email, senha) VALUES (?,?);';
-    const values = [usuario.email, usuario.senha];
+    const sql = 'INSERT INTO usuario(setor, cpf, nome, email, senha, perfil) VALUES (?,?,?,?,?,?);';
+    const values = [usuario.setor, usuario.cpf, usuario.nome, usuario.email, usuario.senha, usuario.perfil];
     return await conn.query(sql, values);
 }
 
@@ -22,8 +22,8 @@ async function deleteUsuario(id){
 
 async function updateUsuario(usuario){
     const conn = await usuarioBD.connect();
-    const sql = 'UPDATE usuario SET email=?, senha=? WHERE id=?;';
-    const values = [usuario.email, usuario.senha, usuario.id];
+    const sql = 'UPDATE usuario SET setor=?, nome=?, email=?, senha=?, perfil=? WHERE id=?;';
+    const values = [usuario.setor, usuario.nome, usuario.email, usuario.senha, usuario.perfil, usuario.id];
     return await conn.query(sql, values);
 }
 

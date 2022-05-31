@@ -9,6 +9,13 @@ function ocultarSenha(senha) {
 
 function autenticar(req, res, next){
     if(req.isAuthenticated()) return next();
-    res.redirect('/login?fail=true');
+    res.redirect('/');
 }
-module.exports = {ocultarSenha, autenticar};
+
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      return res.redirect('/home/usuario');
+    }
+    next()
+  }
+module.exports = {ocultarSenha, autenticar, checkNotAuthenticated};

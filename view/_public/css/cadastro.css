@@ -87,6 +87,9 @@ h1{
     margin-bottom: 2%;
     width: 45%;
 }
+#cpf{
+    width: 20%;
+}
 #sexo_font{
     padding-right: 8%;
 }
@@ -216,7 +219,6 @@ h1{
     background-position: right;
 }
 #avancar{
-    padding-left: 5%;
     background-size: 200%;
     margin-left: 12%;
     margin-top: 3%;
