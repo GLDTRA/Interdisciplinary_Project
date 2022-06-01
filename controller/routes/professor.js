@@ -3,28 +3,27 @@ const seguranca = require('../../model/components/seguranca');
 const profBanco = require('../../model/repositories/sql_objects/professorDB');
 const userBanco = require('../../model/repositories/sql_objects/usuarioDB');
 var auxprof = null;
+
 module.exports = function(app){
     
     /*Tela inicial*/
-    app.get('/home/docente', async(req, res, next) => {
+    app.get('/home/docente', seguranca.autenticar, async(req, res, next) => {
         try {
             const cpfUser = req.user.cpf;
             const perfilUser = req.user.perfil;
-            var professor = await profBanco.getProfessorCpf(cpfUser);
-            auxprof = professor;
+            const professor = await profBanco.getProfessorCpf(cpfUser);
+        
             if (cpfUser == undefined){
                 cpfUser = professor.cpf;
             }
-            
-            var whatsapp = professor.whatsapp;
-            
-            if (whatsapp == 1){
-                whatsapp = "sim";
+
+            if (professor.whatsapp == 1){
+                professor.whatsapp = "sim";
             } else {
-                whatsapp = "não";
+                professor.whatsapp = "não";
             }
 
-            res.render('professor/HomeDocente', { professor, perfilUser, whatsapp});
+            res.render('professor/HomeDocente', { professor, perfilUser, professor});
         } catch (err){
             next(err);
         }

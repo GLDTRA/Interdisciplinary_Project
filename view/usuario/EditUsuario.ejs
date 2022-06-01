@@ -17,7 +17,7 @@
 <header>
 
     <a href="#" class="cad"><span>área</span><br> alteração</a>
-    <h3 id="bem_vindo"> Perfil: <span id="perfil"><br><%= usuario.nome %></span> </h3>
+    <h3 id="bem_vindo"> Perfil: <span><%= user.nome %></span> </h3>
     <nav class="navbar">
         <a href="http://localhost:8081/home/usuario">Home</a>
     </nav>
@@ -37,10 +37,16 @@
         <form action="/cadastro/usuario/edit/salvar" method="post">
             <input type="hidden" name="id" placeholder="nome" class="box" value= <%=usuario.id %>>
             <input type="hidden" name="cpf" placeholder="cpf" class="box" value= <%=usuario.cpf %>>
-            <input type="nome" name="nome" placeholder="nome" class="box" value= <%=usuario.nome %>>
+
+            <label class="lblprof">Nome:</label>
+            <input type="text" name="nome" placeholder="nome" class="box" value= <%=usuario.nome %>>
+            <label class="lblprof">Setor:</label>
             <input type="text" name="setor" placeholder="setor" class="box" value= <%=usuario.setor %>>
+            <label class="lblprof">Perfil (adm ou professor):</label>
             <input type="text" name="perfil" placeholder="perfil" class="box" value= <%=usuario.perfil %>>
+            <label class="lblprof">email:</label>
             <input type="email" name="email" placeholder="email" class="box" value= <%=usuario.email %>>
+            <label class="lblprof">senha:</label>
             <input type="senha" name="senha" placeholder="senha" class="box">
             <input type="submit" class="btn" value="alterar">
             <input type="button" class="btn" value="delete" onclick="location.href='/delete/usuario<%= usuario.id %>'"/>

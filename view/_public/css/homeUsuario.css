@@ -177,8 +177,18 @@ header .follow a:hover{
     padding:.5rem 0;
 }
 
-/*contato*/
-
+/*formatação de formulários*/
+.lblprof{
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: brown;
+}
+.lbl_dado{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #444;
+}
 .form .row{
     display: flex;
     flex-wrap: wrap;

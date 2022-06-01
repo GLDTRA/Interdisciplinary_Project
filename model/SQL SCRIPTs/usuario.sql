@@ -18,3 +18,5 @@ VALUES ("RH", "49973085876","Teste ADM",'w@W','05b761259247b72e5acd8896651220f9f
 
 SELECT * FROM usuario;
 
+UPDATE `sap_database`.`usuario` SET `senha` = '2e6f9b0d5885b6010f9167787445617f553a735f', `perfil` = 'adm' WHERE (`id` = '1');
+

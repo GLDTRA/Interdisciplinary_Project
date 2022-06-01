@@ -36,20 +36,46 @@
         <div class="form" id="perfil"> 
             <div class="row">
                 <form>
-                    <input type="text" name="nome" placeholder="nome" class="box" disabled="" value= <%=professor.nome %>>
-                    <input type="text" name="cpf" placeholder="cpf" class="box" disabled="" value= <%=professor.cpf %>>
-                    <input type="text" name="sexo" placeholder="sexo" class="box" disabled="" value= <%=professor.sexo %>>
-                    <input type="date" name="cpf" placeholder="data" class="box" disabled="" value= <%=professor.data_nascimento %>>
-                    <input type="text" name="endereco" placeholder="endereço" class="box" disabled="" value= <%=professor.endereco %>>
-                    <input type="number" name="numero" placeholder="número" class="box" disabled="" value= <%=professor.numero %>>
-                    <input type="text" name="complemento" placeholder="complemento" class="box" disabled="" value= <%=professor.complemento %>>
-                    <input type="text" name="bairro" placeholder="bairro" class="box" disabled="" value= <%=professor.bairro %>>
-                    <input type="text" name="cidade" placeholder="cidade" class="box" disabled="" value= <%=professor.cidade %>>
-                    <input type="text" name="estado" placeholder="estado" class="box" disabled="" value= <%=professor.estado %>>
-                    <input type="text" name="cep" placeholder="cep" class="box" disabled="" value= <%=professor.cep %>>
-                    <input type="text" name="tel_residencial" placeholder="telefone residencial" class="box" disabled="" value= <%=professor.tel_residencial %>>
-                    <input type="text" name="celular" placeholder="celular" class="box" disabled="" value= <%=professor.celular %>>
-                    <input type="text" name="whats" placeholder="WhatsApp ('sim')('nao')" class="box" disabled="" value="WhasApp <%= whatsapp %>"><br>
+                    <label class="lblprof">nome completo</label><br>
+                    <label class="lbl_dado"><%=professor.nome %></label><br><br>
+
+                    <label class="lblprof">cpf</label><br>
+                    <label class="lbl_dado"><%=professor.cpf %></label><br><br>
+
+                    <label class="lblprof">data de nascimento</label><br>
+                    <label class="lbl_dado"><%=professor.data_nascimento %></label><br><br>
+
+                    <label class="lblprof">endereço</label><br>
+                    <label class="lbl_dado"><%=professor.endereco %></label><br><br>
+
+                    <label class="lblprof">número</label><br>
+                    <label class="lbl_dado"><%=professor.numero %></label><br><br>
+
+                    <label class="lblprof">complemento</label><br>
+                    <label class="lbl_dado"><%=professor.complemento %></label><br><br>
+
+                    <label class="lblprof">bairro</label><br>
+                    <label class="lbl_dado"><%=professor.bairro %></label><br><br>
+
+                    <label class="lblprof">cidade</label><br>
+                    <label class="lbl_dado"><%=professor.cidade %></label><br><br>
+
+                    <label class="lblprof">estado</label><br>
+                    <label class="lbl_dado"><%=professor.estado %></label><br><br>
+
+                    <label class="lblprof">cep</label><br>
+                    <label class="lbl_dado"><%=professor.cep %></label><br><br>
+
+
+                    <label class="lblprof">telefone residencial</label><br>
+                    <label class="lbl_dado"><%=professor.tel_residencial %></label><br><br>
+
+                    <label class="lblprof">celular</label><br>
+                    <label class="lbl_dado"><%=professor.celular %></label><br><br>
+
+                    <label class="lblprof">whatsapp (sim/não)</label><br>
+                    <label class="lbl_dado"><%= whatsapp %></label><br><br>
+
                     <input type="button" class="btn"
                       value="delete" onclick="location.href='/delete/professor<%= professor.registro %>'"/>
                 </form>

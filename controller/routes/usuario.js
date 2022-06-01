@@ -64,9 +64,10 @@ module.exports = function(app){
     //ROTA PARA TELA DE ALTERAÇÃO DE USUÁRIO
     app.get('/edit/usuario:id', seguranca.autenticar, async (req, res, next) =>{
         try {
+            var user = req.user;
             var id = req.params.id;
             const usuario = await usuarioBanco.getUsuarioId(id);
-            res.render('usuario/EditUsuario', { mensagem: 'alteracao', usuario});
+            res.render('usuario/EditUsuario', { mensagem: 'alteracao', usuario, user});
         } catch (err) {
             next(err);
         }
