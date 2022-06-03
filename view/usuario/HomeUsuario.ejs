@@ -75,7 +75,7 @@
                     <td>
                       <input type="button" class="btn" 
                       value="ver" onclick="location.href='/edit/usuario<%= usuario.id %>'"/>
-                      
+          
                     </td>
                 </tr>
             </div>
@@ -85,10 +85,17 @@
 </section>
 <!-- lista usuarios section fim  -->
 
-<!-- lista professores section inicio  -->
+<!-- lista professores section inicio  -->  
 <section class="professores" id="professores">
-
-<h1 class="heading"> lista <span> professores </span></h1>
+  <h1 class="heading"> lista <span> professores </span></h1>
+  <div class="pesquisa">
+    <div class="row">
+      <form action="/busca/professor" method="post">
+          <input type="text" name="busca" placeholder="Pesquisar por CPF/nome" class="box">
+          <input type="submit" class="btnPesquisa" value="buscar">
+      </form>
+    </div>
+  </div>
     <table>
       <thead>
         <tr>

@@ -169,6 +169,9 @@ form{
 	font-size: 20px;
 	color: #ffffff;
 }
+.cadastre{
+	display: flex;
+}
 #esqueceu{
 	padding-top: 10%;
 	padding-bottom: 7%;
@@ -178,6 +181,7 @@ form{
 	color: rgb(255, 255, 255);
 	font-size: 0.9rem;
 	transition: .3s;
+	margin-right: 10% ;
 }
 #esqueceu:hover{
 	color: #fd8e8e;

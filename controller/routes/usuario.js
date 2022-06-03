@@ -20,6 +20,7 @@ module.exports = function(app){
     //ROTA PARA SALVAR USUÁRIO (CADASTRAR)
     app.post('/cadastro/usuario/salvar', seguranca.autenticar, (req,res) => {
         try {
+            console.log(req.body.cpf);
            var usuario ={
             cpf: req.body.cpf, 
             setor: req.body.setor,
@@ -112,7 +113,6 @@ module.exports = function(app){
         
         try {
             usuarioBanco.updateUsuario(usuario);
-            console.log(usuario);
             res.render('usuario/Sucesso', { mensagem: 'alterado' });
         } catch (error) {
             console.log(usuario);
@@ -162,6 +162,32 @@ module.exports = function(app){
                 whatsapp = "não";
             }
             res.render('usuario/ConsultaProf', { mensagem: 'alteracao', professor, whatsapp, usuario});
+        } catch (err) {
+            next(err);
+        }
+    });
+
+    //ROTA DE BUSCA DE PROFESSOR
+    app.post('/busca/professor', seguranca.autenticar, async (req, res, next) =>{
+        try {
+            const usuario = req.user;
+            var professor; 
+            const profcpf = await profBanco.buscaProfessorCpf(req.body.busca);
+            
+            const profnome = await profBanco.buscaProfessorNome(req.body.busca);
+            
+            if (profnome == ""){
+                if(profcpf != ""){
+                    professor = profcpf;
+                    
+                } else{
+                    res.redirect('/home/usuario');
+                }
+            } else {
+                professor = profnome;
+            }          
+            
+            res.render('usuario/ResultadoBusca', { mensagem: 'professores', usuario, professor});
         } catch (err) {
             next(err);
         }

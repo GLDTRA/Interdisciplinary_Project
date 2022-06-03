@@ -1,0 +1,6 @@
+1 - Execute o script SQL da pasta Model no MySQL;
+2 - Instale o Express na pasta do projeto npm install express;
+3 - Rode o projeto (comando 'node index.js');
+4 - Login e senha para acessar aplicação:
+	email: w@w
+	senha: 24017878

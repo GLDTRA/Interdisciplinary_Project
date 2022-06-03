@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Busca <%= mensagem %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../_public/css/homeUsuario.css">
+
+</head>
+<body>
+
+<div id="menu-bars" class="fas fa-bars"></div>
+    
+<!-- header section começo  -->
+<header>
+  
+    <a href="#" class="logo"> <span>s</span>ap</a>
+    <h3 id="bem_vindo"> Perfil: <span><%= usuario.nome %></span> </h3>
+    <nav class="navbar">
+        <a href="http://localhost:8081/home/usuario">Home</a>
+    </nav>
+
+    <form action="/logout?_method=DELETE" method="POST">
+      <button class="btn" type="submit">Log Out</button>
+    </form>
+</header>
+<!-- header section fim -->
+
+<!-- lista professores section inicio  -->  
+<section class="professores" id="professores">
+  <h1 class="heading"> lista <span> <%=mensagem%> </span></h1>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% professor.forEach(function(professor){ %>
+          <div class="prof-list" id="prof-list">
+              <tr class="prof">
+                  <td data-label="id"><%= professor.registro %></td> 
+                  <td data-label="nome"><%= professor.nome %></td>
+                  <td data-label="email"><%= professor.email %></td>
+                  <td>
+                    <input type="button" class="btn"
+                    value="ver" onclick="location.href='/consulta/professor<%= professor.registro %>'" />
+                  </td>
+              </tr>
+          </div>
+          <% }) %>
+      </tbody>
+    </table>
+</section>
+<!-- lista professores section fim  -->
+
+
+
+<!-- footer section  -->
+<footer class="footer"> created by <span> grupo 3</span> | all rights reserved! </footer>
+
+
+
+<!-- custom js file link  -->
+<script src="../_public/js/perfilUsuario.js"></script>
+</body>
+</html>

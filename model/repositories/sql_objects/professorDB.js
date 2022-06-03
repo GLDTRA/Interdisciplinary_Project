@@ -54,6 +54,18 @@ async function getProfessorCpf(cpf){
     else return null;
 }
 
+async function buscaProfessorNome(nome){
+    const conn = await professorBD.connect();
+    const [rows] = await conn.query("SELECT * FROM professor WHERE nome LIKE '" + nome + "%';");
+    return rows;
+}
+
+async function buscaProfessorCpf(cpf){
+    const conn = await professorBD.connect();
+    const [rows] = await conn.query("SELECT * FROM professor WHERE cpf LIKE '" + cpf + "';");
+    return rows;
+}
+
 async function login(email, senha){
     const conn = await professorBD.connect();
     const sql = 'SELECT * FROM professor WHERE email=? and senha=?';
@@ -64,4 +76,5 @@ async function login(email, senha){
     else return null;
 }
 
-module.exports = {selectProfessor, insertProfessor, deleteProfessor, updateProfessor, updateProfessorEmail, getProfessorId, getProfessorCpf, login}
+module.exports = {selectProfessor, insertProfessor, deleteProfessor, updateProfessor, 
+    updateProfessorEmail, getProfessorId, getProfessorCpf, buscaProfessorCpf, buscaProfessorNome, login}
