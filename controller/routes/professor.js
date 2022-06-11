@@ -88,23 +88,24 @@ module.exports = function(app){
     /*rota para editar alterar professor*/
     app.post('/cadastro/professor/edit/salvar', (req, res) => {
         try {
-            
             if (req.body.whats == "sim"){
-                var whats = 0;
-            } else {
                 var whats = 1;
+            } else {
+                var whats = 0;
             }
+            
             var professor ={
-                registro: auxprof.registro,
+                registro: req.body.registro,
                 tel_residencial: req.body.tel_residencial, 
                 celular: req.body.celular,
                 whatsapp: whats};
+
+                console.log(professor);
             profBanco.updateProfessor(professor);
             res.send("Professor foi alterado");
 
         } catch (error) {
-            console.log(professor.registro);
-            res.send('professor nao cadastrado');
+            console.log(error);
         }
     });
 }

@@ -43,8 +43,6 @@ module.exports = function(app){
                 if (req.user.perfil != 'adm') {
                     const cpfUser = req.user.cpf;
                     const professor = await profBanco.getProfessorCpf(cpfUser);
-                    console.log(professor);
-                    res.redirect('/home/docente');
                     res.render('professor/HomeDocente', { professor});
                 } else {
                     const usuario = req.user;

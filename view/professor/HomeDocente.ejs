@@ -89,6 +89,7 @@
     
     <div class="row">
         <form action="/cadastro/professor/edit/salvar" method="post">
+            <input type="hidden" name="registro" placeholder="id" class="box" value= <%=professor.registro %>>
             <label class="lblprof">telefone residencial</label>
             <input type="text" name="tel_residencial" class="box" value= <%=professor.tel_residencial %>>
 
